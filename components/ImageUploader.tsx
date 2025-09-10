@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback, useRef } from 'react';
 import { UploadIcon } from './icons';
 
@@ -67,7 +66,7 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageSelect, setError }
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center p-8">
+    <div className="w-full max-w-2xl mx-auto flex flex-col items-center justify-center p-4">
       <div
         onClick={handleClick}
         onDragEnter={handleDragEnter}
@@ -75,7 +74,7 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageSelect, setError }
         onDragOver={handleDragOver}
         onDrop={handleDrop}
         className={`w-full h-80 border-2 border-dashed rounded-2xl flex flex-col items-center justify-center cursor-pointer transition-all duration-300 ${
-          isDragging ? 'border-indigo-400 bg-gray-800/50' : 'border-gray-600 hover:border-gray-500'
+          isDragging ? 'border-blue-500 bg-blue-50' : 'border-gray-300 hover:border-gray-400 bg-white'
         }`}
       >
         <input
@@ -85,11 +84,11 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageSelect, setError }
           accept="image/jpeg,image/png,image/webp,image/heic"
           className="hidden"
         />
-        <UploadIcon className="w-16 h-16 text-gray-500 mb-4 transition-transform duration-300 group-hover:scale-110" />
-        <p className="text-gray-400 text-lg">
-          <span className="font-semibold text-indigo-400">Click to upload</span> or drag and drop
+        <UploadIcon className="w-16 h-16 text-gray-400 mb-4 transition-transform duration-300 group-hover:scale-110" />
+        <p className="text-gray-500 text-lg">
+          <span className="font-semibold text-blue-600">Click to upload</span> or drag and drop
         </p>
-        <p className="text-gray-500 text-sm mt-1">PNG, JPG, WEBP, or HEIC (max 10MB)</p>
+        <p className="text-gray-400 text-sm mt-1">PNG, JPG, WEBP, or HEIC (max 10MB)</p>
       </div>
     </div>
   );
